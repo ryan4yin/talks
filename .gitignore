@@ -1,3 +1,12 @@
+public/
+.DS_Store
+_gen/
+
+.direnv/
+.pre-commit-config.yaml
+
+
+
 # Logs
 logs
 *.log

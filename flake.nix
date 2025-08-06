@@ -1,0 +1,70 @@
+{
+  description = "A Nix-flake-based Python development environment";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    flake-utils.url = "github:numtide/flake-utils";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+  };
+
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      pre-commit-hooks,
+      ...
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+      in
+      {
+        checks = {
+          pre-commit-check = pre-commit-hooks.lib.${system}.run {
+            src = ./.;
+            hooks = {
+              nixfmt-rfc-style = {
+                enable = true;
+                settings.width = 100;
+              };
+              typos = {
+                enable = true; # Source code spell checker
+                settings = {
+                  write = true; # Automatically fix typos
+                  configPath = "./.typos.toml";
+                };
+              };
+              prettier = {
+                enable = true; # Markdown & TS formatter
+                settings = {
+                  write = true; # Automatically format files
+                  configPath = "./.prettierrc.yaml";
+                };
+              };
+            };
+          };
+        };
+
+        devShells.default = pkgs.mkShell {
+          packages = with pkgs; [
+            # node env
+            nodejs
+            pnpm
+
+            # Nix-related
+            nixfmt # Nix Code Formatter
+            # spell checker
+            typos
+            # code formatter
+            nodePackages.prettier
+          ];
+
+          shellHook = ''
+            ${self.checks.${system}.pre-commit-check.shellHook}
+          '';
+        };
+      }
+    );
+}
