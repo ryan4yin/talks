@@ -85,7 +85,21 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 - Nix: 很有意思的包管理器，很适合用来管理开发环境
 - NixOS: 为了这碟醋包了这顿饺子、手上拿着锤子看谁都是钉子
 
-## 直接开搞
+---
+
+# 但是话又说回来
+
+- 声明: 下一张图截自某著名shi坑 4chan, 不是我说的
+
+---
+
+# 某 4chan 佬暴论
+
+![](/4chan-暴论.jpg)
+
+---
+
+# 所以，NixOS 到底如何，且让我来试试，开搞!
 
 ---
 
@@ -112,8 +126,9 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 
 - [最初的 Release 记录](https://github.com/ryan4yin/nix-config/releases?page=3)
 - 两周：使用虚拟机学习 NixOS，还原我旧系统的环境
-- 一小时: 在物理机上部署已经写好的配置
+- 半小时: 在物理机上部署已经写好的配置
   - 最耗时间的部分：nixos-install 下载、Nvidia 硬件配置
+  - 跟我在虚拟机里的环境完全一致, fascinating!!!
 - 三天：从 i3 迁移到 hyprland.
 - 半年：i3 与 hyprland 混用、无痛切换
 - 现在：hyprland only
@@ -123,23 +138,23 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 # 第一篇公开分享的博客
 
 - [2023-05-09 在 NixOS 群里分享的第一个版本](https://github.com/ryan4yin/thiscute.world/blob/e147b5c889a712751593df337415308e8d76885d/content/posts/2023/Q2/nixos-and-flake-basics/index.md)
-- [文章链接（内容已迁移到单独站点）](https://thiscute.world/posts/nixos-and-flake-basics/)
+- [文章链接(内容已迁移到单独站点)](https://thiscute.world/posts/nixos-and-flake-basics/)
 
 ---
 
 # 后续更新的回顾
 
-- <https://www.zhihu.com/question/20870514/answer/3024654921>
+- https://www.zhihu.com/question/20870514/answer/3024654921
 
 ---
 
 # 收到的其他反馈
 
-- [[2023-05-11] NixOS & Nix Flakes - A Guide for Beginners - Reddit](https://www.reddit.com/r/NixOS/comments/13dxw9d/nixos_nix_flakes_a_guide_for_beginners/)
-- [[2023-06-22] Updates: NixOS & Nix Flakes - A Guide for Beginners - Reddit](https://www.reddit.com/r/NixOS/comments/14fvz1q/updates_nixos_nix_flakes_a_guide_for_beginners/)
-- [[2023-06-24] An unofficial NixOS & Flakes book for beginners - Discourse](https://discourse.nixos.org/t/an-unofficial-nixos-flakes-book-for-beginners/29561)
-- [[2023-07-06] This isn't an issue but it has to be said: - Discussions](https://github.com/ryan4yin/nixos-and-flakes-book/discussions/43)
-- [[2023-06-24] NixOS 与 Flakes | 一份非官方的新手指南 - 0xffff 社区](https://0xffff.one/d/1547-nixos-yu-flakes-yi-fen-fei-guan)
+- [2023-05-11 NixOS & Nix Flakes - A Guide for Beginners - Reddit](https://www.reddit.com/r/NixOS/comments/13dxw9d/nixos_nix_flakes_a_guide_for_beginners/)
+- [2023-06-22 Updates: NixOS & Nix Flakes - A Guide for Beginners - Reddit](https://www.reddit.com/r/NixOS/comments/14fvz1q/updates_nixos_nix_flakes_a_guide_for_beginners/)
+- [2023-06-24 An unofficial NixOS & Flakes book for beginners - Discourse](https://discourse.nixos.org/t/an-unofficial-nixos-flakes-book-for-beginners/29561)
+- [2023-07-06 This isn't an issue but it has to be said: - Discussions](https://github.com/ryan4yin/nixos-and-flakes-book/discussions/43)
+- [2023-06-24 NixOS 与 Flakes | 一份非官方的新手指南 - 0xffff 社区](https://0xffff.one/d/1547-nixos-yu-flakes-yi-fen-fei-guan)
 - [buy me a coffee](https://buymeacoffee.com/ryan4yin)
 
 ---
