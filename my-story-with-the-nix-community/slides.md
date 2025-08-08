@@ -178,3 +178,19 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 - Patreon: $70
 - BTC: $100
 - 爱发电：RMB 300
+
+# 还有时间?
+
+那继续聊聊
+
+---
+
+# NixOS & Flakes Book 与 DNS blocker 猎巫行动?
+
+- <https://x.com/ryan4yin/status/1769915400366833841>
+
+---
+
+# NixOS & Flakes Book 莫名其妙被国人喷了?
+
+- <https://x.com/ryan4yin/status/1864130575298384268>
