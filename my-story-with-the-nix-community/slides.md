@@ -111,6 +111,12 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 # 迁移到 NixOS
 
 - [最初的 Release 记录](https://github.com/ryan4yin/nix-config/releases?page=3)
+- 两周：使用虚拟机学习 NixOS，还原我旧系统的环境
+- 一小时: 在物理机上部署已经写好的配置
+  - 最耗时间的部分：nixos-install 下载、Nvidia 硬件配置
+- 三天：从 i3 迁移到 hyprland.
+- 半年：i3 与 hyprland 混用、无痛切换
+- 现在：hyprland only
 
 ---
 
@@ -128,6 +134,15 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 ---
 
 # 收到的其他反馈
+
+- [[2023-05-11] NixOS & Nix Flakes - A Guide for Beginners - Reddit](https://www.reddit.com/r/NixOS/comments/13dxw9d/nixos_nix_flakes_a_guide_for_beginners/)
+- [[2023-06-22] Updates: NixOS & Nix Flakes - A Guide for Beginners - Reddit](https://www.reddit.com/r/NixOS/comments/14fvz1q/updates_nixos_nix_flakes_a_guide_for_beginners/)
+- [[2023-06-24] An unofficial NixOS & Flakes book for beginners - Discourse](https://discourse.nixos.org/t/an-unofficial-nixos-flakes-book-for-beginners/29561)
+- [[2023-07-06] This isn't an issue but it has to be said: - Discussions](https://github.com/ryan4yin/nixos-and-flakes-book/discussions/43)
+- [[2023-06-24] NixOS 与 Flakes | 一份非官方的新手指南 - 0xffff 社区](https://0xffff.one/d/1547-nixos-yu-flakes-yi-fen-fei-guan)
+- [buy me a coffee](https://buymeacoffee.com/ryan4yin)
+
+---
 
 ![](/2023-08-13-mail-about-creating-patreon-group.png)
 
