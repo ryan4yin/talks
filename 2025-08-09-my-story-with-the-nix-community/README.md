@@ -1,4 +1,4 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# My story with the Nix community
 
 To start the slide show:
 

@@ -1,0 +1,67 @@
+name: Deploy pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # write to gh-pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Setup nu
+        uses: hustcer/setup-nu@v3
+        with:
+          version: 0.106.0
+
+      - name: Find and build all talks
+        shell: nu {0}
+        run: |
+          # Create talks directory
+          mkdir talks
+
+          # Find all directories with package.json files (potential talks)
+          ls */package.json | each { |file|
+            let dir = ($file | get name | path dirname)
+            echo $"Building talk in: ($dir)"
+            cd $dir
+            
+            # Install dependencies
+            pnpm install
+            # Build the talk with url base path:
+            pnpm build --base /($dir)/
+            
+            # Move built files to talks directory
+            cd ..
+            cp -r -v $"($dir)/dist" $"talks/($dir)"
+            
+            echo $"Built talk: ($dir)"
+          }
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./talks
+          cname: talks.thiscute.world
+          publish_branch: gh-pages
