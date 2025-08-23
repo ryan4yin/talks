@@ -20,7 +20,7 @@ NixOS & Flakes Book 的由来，以及我如何通过折腾 NixOS 获得约 USD$
 
 # 源起
 
-- My Distro Hope Path: Ubuntu -> Linux Mint -> Deepin -> Manjaro -> openSUSE -> EndervourOS.
+- My distro-hoping path: Ubuntu -> Linux Mint -> Deepin -> Manjaro -> openSUSE -> EndervourOS.
   - 2019: Manjaro + archlinux-cn: 日常炸动态链接库、炸 VSCode.
   - 2021-2022: openSUSE Tumbleweed:
     - Nvidia + Linux - 原罪
