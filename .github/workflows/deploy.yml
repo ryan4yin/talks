@@ -39,8 +39,8 @@ jobs:
           # Create talks directory
           mkdir talks
 
-          # Find all directories with package.json files (potential talks)
-          ls */package.json | each { |file|
+          # Find all talks
+          ls */slides.md | each { |file|
             let dir = ($file | get name | path dirname)
             echo $"Building talk in: ($dir)"
             cd $dir
@@ -56,6 +56,9 @@ jobs:
             
             echo $"Built talk: ($dir)"
           }
+
+          # Generate index.html with all talks
+          node scripts/generate-index.js
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
