@@ -4,6 +4,8 @@ _gen/
 .direnv/
 .pre-commit-config.yaml
 
+*.aac
+*.mp4
 
 
 # Logs
